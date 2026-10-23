@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <h2>Student Grade Form</h2>
+<label>Studnt Name:</label><br>
+<input type="text"id="name"><br><br>
+<label>Coursework Grade:</label><br>
+<input type="number" id="coursework"><br><br>
+
+<label>Final Exam Grade:</label><br>
+<input type="number" id="final"><br><br>
+
+<button onclick="calculateGrade()">Submit</button>
+
+<h3 id="result"></h3>
+<script>
+function calculateGrade() {
+let name = document.getElementById("name").value;
+let coursework = Number(document.getElementById("coursework").value);
+let finalExam = Number(document.getElementById("final").value);
+
+let total = coursework + finalExam;
+
+document.getElementById("result").innerHTML = 
+"Student: " + name + "<br>Total Grade: " + total;
+}
+</script>
+    </body>
+</html>
